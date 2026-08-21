@@ -40,8 +40,8 @@ const SpacedDiv = styled.div`
 const Alert = ({type, text, setVisible}) => {
   switch(type) {
     case 'error':
-      return 
-        (<OverlayDialog inputColor="#F00" textColor="#FFF">
+      return (
+        <OverlayDialog inputColor="#F00" textColor="#FFF">
           <SpacedDiv>
             <FontAwesomeIcon icon={faBug} />
             <strong> Error: </strong> {text} &nbsp;
@@ -49,10 +49,9 @@ const Alert = ({type, text, setVisible}) => {
           </SpacedDiv>
         </OverlayDialog>
       );
-      break;
     case 'info':
-      return 
-        (<OverlayDialog inputColor="#EEE" textColor="#000">
+      return (
+        <OverlayDialog inputColor="#EEE" textColor="#000">
           <SpacedDiv>
             <FontAwesomeIcon icon={faInfoCircle} />
             <strong> Info:</strong>{text} &nbsp;
@@ -60,10 +59,9 @@ const Alert = ({type, text, setVisible}) => {
           </SpacedDiv>
         </OverlayDialog>
       );
-      break;
     case 'warning':
-      return 
-        (<OverlayDialog inputColor="#CA0" textColor="#FEE">
+      return (
+        <OverlayDialog inputColor="#CA0" textColor="#FEE">
           <SpacedDiv>
             <FontAwesomeIcon icon={faExclamationTriangle} />
             <strong> Warn: </strong>{text} &nbsp;
@@ -71,10 +69,9 @@ const Alert = ({type, text, setVisible}) => {
           </SpacedDiv>
         </OverlayDialog>
       );
-      break;
     case 'success':
-      return 
-        (<OverlayDialog inputColor="#3A5" textColor="#FFF">
+      return (
+        <OverlayDialog inputColor="#3A5" textColor="#FFF">
           <SpacedDiv>
             <FontAwesomeIcon icon={faCheck} />
             <strong> Success: </strong>{text} &nbsp;
@@ -82,7 +79,8 @@ const Alert = ({type, text, setVisible}) => {
           </SpacedDiv>
         </OverlayDialog>
       );
-      break;
+    default:
+      return null;
   }
 
 }

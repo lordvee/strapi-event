@@ -1,7 +1,9 @@
 import AlertBox from "./AlertBox";
-
-  
+import { subscribe, publish, AlertEvent } from "./utils/lib";
 
 export {
-    AlertBox
+    AlertBox,
+    subscribe,
+    publish,
+    AlertEvent
 }
